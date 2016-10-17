@@ -304,8 +304,8 @@ void Uart_Printf(char *fmt,...)
     va_start(ap,fmt);
     vsprintf(string,fmt,ap);//将多个形参所指的字符串合并到string中
 
-   	putsUART1(string);
-//	putsUART2(string);
+ //	putsUART1(string);
+	putsUART2(string);
 
     va_end(ap);
 }

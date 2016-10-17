@@ -26,12 +26,12 @@
 void UltrasonicHandle(void)
 {
 	//Uart_Printf("******start******\n");
-	UART2_SendData(0xe8);
+	UART1_SendData(0xe8);
 	Delay(1);
-	UART2_SendData(0x02);
+	UART1_SendData(0x02);
 	Delay(1);
-	UART2_SendData(0xb4);
-	Delay(1);
+	UART1_SendData(0xb4);
+	Delay(60);
 	//Uart_Printf("******end******\n");
 }
 

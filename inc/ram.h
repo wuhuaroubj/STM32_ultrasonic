@@ -22,7 +22,7 @@
 //#include "GenericTypeDefs.h"
 #include <stm32f10x.h>
 #include "stdio.h"
-#include "stm32f10x_type.h"
+//#include "stm32f10x_type.h"
 
 
 //结构体定义

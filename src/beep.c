@@ -1,10 +1,10 @@
 /**
   ******************************************************************************
   * @file    gpio.c 
-  * @author  joy
+  * @author  jason
   * @version 1.0
-  * @date    2016-8-22
-  * @brief   GPIO
+  * @date    2016-10-14
+  * @brief   BEEP
   ******************************************************************************
   * @attention
   *
@@ -15,16 +15,16 @@
 
 /* Includes ------------------------------------------------------------------*/
 
-#include "GPIO.h"
+#include "beep.h"
 
 GPIO_InitTypeDef GPIO_InitStructure;
 
 /**********************************
-  * @brief  GPIO initialization
+  * @brief  beep initialization
   * @param  None
   * @retval None
 ***********************************/
-void GPIO_Initialization(void)
+void Beep_Initialization(void)
 {
 
  	/*使能APB2外设时钟*/   
@@ -66,13 +66,6 @@ GPIO_Init(GPIOA, &GPIO_InitStructure);
   	GPIO_InitStructure.GPIO_Pin =( GPIO_Pin_10 | GPIO_Pin_3);    //USART1 RX  
   	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;      //复用开漏输入  
   	GPIO_Init(GPIOA, &GPIO_InitStructure);                     //A端口   
-
-
-//初始化端口C的pin13 蜂鸣器管脚高电平响，低电平不响
-GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_Out_PP;
-GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-GPIO_InitStructure.GPIO_Pin   = beep_pin;
-GPIO_Init(beep_gpio, &GPIO_InitStructure);
 
 }
 

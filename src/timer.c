@@ -21,7 +21,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "timer.h"
 #include "UART.h"
-#include <stm32f10x_type.h>
+//#include <stm32f10x_type.h>
 #include "misc.h"
 #include "stm32f10x.h"
 #include "ram.h"
